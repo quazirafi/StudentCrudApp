@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register Page</title>
+<script type="text/javascript" src = "ValidateForm.js"></script>
+<link rel="stylesheet" href="home.css">
+</head>
+<body>
+<div id="mainContent">
+<div id="top">
+<a href="home.html">Register</a>
+</div>
+<div id="mid"> 
+<form name="stdInfo">
+		Name:<br>
+		<input type="text" name="name"><br>
+		Roll:<br>
+		<input type="text" name="roll"><br>
+		CGPA:<br>
+		<input type="text" name="cgpa"><br>
+		Year:<br>
+		<input type="text" name="year"><br>
+		DOB:<br>
+		<input type="date" name="dob"><br>
+		<br>
+		<input type="button" value="Save" onclick="validation()" ></input>
+		<input type="button" value="Show List" onclick="populate()" ></input>
+</form>
+</div>
+<div id="bottom">
+<table id="stdTable" style="display:none;margin-left:360px;margin-top:100px">
+
+</table>
+</div>
+</div>
+</body>
+</html>

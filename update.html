@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Update Page</title>
+<script type="text/javascript" src = "ValidateForm.js"></script>
+<script> </script>
+</head>
+<body>
+<div id="mainContent">
+<div id="navigator" style="text-align:center">
+<a  href="home.html">Register</a>
+</div>
+<form style="text-align:center" name="stdInfo" >
+		Name:<br>
+		<input type="text" name="name" id="name2" /><br>
+		Roll:<br>
+		<input type="text" name="roll" id="roll" /><br>
+		CGPA:<br>
+		<input type="text" name="cgpa" id="cgpa"/><br>
+		Year:<br>
+		<input type="text" name="year" id="year"/><br>
+		DOB:<br>
+		<input type="date" name="dob" id="dob"/><br>
+		<br>
+		<input type="button" value="Update" onclick="finalUpdate()" ></input>
+</form>
+</div>
+<script>
+var index = parseInt(sessionStorage.getItem("index"));
+var students = JSON.parse(sessionStorage.getItem("students"));
+console.log(students[index].stdName);
+document.getElementById("name2").value = students[index].stdName;
+document.getElementById("roll").value = students[index].stdRoll;
+document.getElementById("cgpa").value = students[index].stdCGPA;
+document.getElementById("year").value = students[index].stdYear;
+document.getElementById("dob").value = students[index].stdDOB;
+</script>
+</body>
+</html>
